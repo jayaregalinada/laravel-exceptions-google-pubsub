@@ -27,11 +27,11 @@ class TopicNotFoundException extends NotFoundHttpException
     {
         $msg = json_decode($message, true);
 
-        if (!json_last_error()) {
+        if (json_last_error()) {
             return $this->createMessage($message, $this->topic);
         }
 
-        return $this->createMessage($msg->error->message, $this->topic);
+        return $this->createMessage($msg['error']['message'], $this->topic);
     }
 
     private function createMessage($message, $topic) : string
