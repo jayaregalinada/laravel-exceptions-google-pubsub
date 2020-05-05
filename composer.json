@@ -1,0 +1,28 @@
+{
+  "name": "jag/laravel-exceptions-google-pubsub",
+  "description": "Complementary package for jag/laravel-*-google-pubsub",
+  "type": "library",
+  "require": {
+    "google/cloud-pubsub": "^1.24",
+    "symfony/http-kernel": "^5.0",
+    "ext-json": "*",
+    "php": "^7.1"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jay Are Galinada",
+      "email": "jayaregalinada@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Jag\\Exceptions\\GooglePubSub\\": "src/"
+    }
+  }
+}
