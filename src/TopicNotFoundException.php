@@ -31,7 +31,7 @@ class TopicNotFoundException extends NotFoundHttpException
             return $this->createMessage($message, $this->topic);
         }
 
-        return $this->createMessage($msg['error']['message'], $this->topic);
+        return $this->createMessage($msg['message'], $this->topic);
     }
 
     private function createMessage($message, $topic) : string
